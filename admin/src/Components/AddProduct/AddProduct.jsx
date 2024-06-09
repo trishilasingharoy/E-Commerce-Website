@@ -26,7 +26,7 @@ const AddProduct = () => {
         let formData = new FormData();
         formData.append('product',image);
 
-        await fetch('https://e-commerce-website-opal-one.vercel.app/upload',{
+        await fetch('http://localhost:4000/upload',{
             method:'POST',
             headers:{
                 Accept:'application/json',
@@ -38,7 +38,7 @@ const AddProduct = () => {
         {
             product.image=responseData.image_url;
             console.log(product);
-            await fetch('https://e-commerce-website-opal-one.vercel.app/addproduct',{
+            await fetch('http://localhost:4000/addproduct',{
                 method: 'POST',
                 headers:{
                     Accept:'application/json',
