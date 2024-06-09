@@ -7,7 +7,7 @@ const NewCollections = () => {
   const [new_collection, setNew_collection] = React.useState([]);
 
   useEffect(()=>{
-          fetch('http://localhost:4000/newcollections')
+          fetch('https://e-commerce-website-opal-one.vercel.app/newcollections')
           .then((response)=>response.json())
           .then((data)=>setNew_collection(data));
   },[])
